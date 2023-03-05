@@ -6,10 +6,41 @@
     <title>@ViewData["Title"] - Web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css"/>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="~/css/MainSass.css" />
+    <link rel="stylesheet" href="~/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <nav>
+        <div class="registration">
+            <div class="container">
+                <div class="profile">
+                <div class="city">Ваш город: <a asp-controller=""asp-action="">Москва</a></div>
+            
+                <div class="loginOrRegistration">
+                    <a asp-controller="" asp-action="" class="login">Войти</a>
+                    <a asp-controller="" asp-action="" class="Registration">Регистрация</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <div  class="container">
+                <div class="company">
+                    <img class="mainLogo" src="~/img/logo/TealLogo.jpg" alt="" />
+                    <form class="mainSearchString" asp-action="" asp-controller="" method="get">
+                        <input type="search" name="query" placeholder="Поиск" />
+                        <button type="submit">Найти</button>
+                    </form>
+
+                    <div class="cartAndPhoneNumber">
+                        <div class="btn"><button asp-action="" asp-controller=""><i class="fa fa-shopping-basket" aria-hidden="true"></i> Корзина: пуста</button></div>
+                        <a class="PhoneNumber" href="tel:+7777777777">+7 (777) 77-77-77</a>
+                        <a class="underPhone" asp-action="" asp-controller="">Отправить сообщение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="mainNav">
 
         </nav>
     </header>
